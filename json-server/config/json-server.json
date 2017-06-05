@@ -1,0 +1,22 @@
+{
+  "port": {{cfg.port}},
+  {{#if cfg.host}}
+    "host": "{{cfg.host}}",
+  {{else}}
+    "host": "{{sys.ip}}",
+  {{/if}}
+  "watch": {{cfg.watch}},
+  "middleware": {{toJson cfg.middleware}},
+  {{#if cfg.static}}
+    "static": "{{cfg.static}}",
+  {{else}}
+    "static": "{{pkg.svc_static_path}}",
+  {{/if}}
+  "routes": "{{pkg.svc_config_path}}/routes.json",
+  "read_only": {{cfg.read_only}},
+  "disable_cors": {{cfg.disable_cors}},
+  "disable_gzip": {{cfg.disable_gzip}},
+  "delay": {{cfg.delay}},
+  "id": "{{cfg.id}}",
+  "quiet": {{cfg.quiet}}
+}

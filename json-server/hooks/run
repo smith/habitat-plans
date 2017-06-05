@@ -1,0 +1,11 @@
+#!/bin/bash
+
+exec 2>&1
+
+if [[ -n "{{cfg.source}}" ]]; then
+  source="{{cfg.source}}"
+else
+  source="{{pkg.svc_config_path}}/db.json"
+fi
+
+exec json-server --config "{{pkg.svc_config_path}}/json-server.json" "$source"

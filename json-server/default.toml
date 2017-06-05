@@ -1,0 +1,66 @@
+# Set port
+port = 3000
+
+# Set host
+#
+# If this is unset (the default), it will use sys.ip (the primary IP)
+#
+# host = "0.0.0.0"
+
+# Watch file(s)
+watch = false
+
+# Paths to middleware files
+#
+# See https://github.com/typicode/json-server#add-middlewares
+middleware = []
+
+# Set static files directory
+#
+# Uses pkg.svc_static_path by default. You can set it to something else here.
+#
+# static = "/hab/svc/json-server/static"
+
+# Allow only GET requests
+read_only = false
+
+# Disable Cross-Origin Resource Sharing
+disable_cors = false
+
+# Disable GZIP Content-Encoding
+disable_gzip = false
+
+# Add delay to responses (ms)
+delay = 0
+
+# Set database id property (e.g. _id)
+id = "id"
+
+# Suppress log messages from output
+quiet = false
+
+# If source is set, json-server will use this as its data source.
+#
+# A path to a JSON or JavaScript file can be used, or a URL. If a URL is used,
+# `watch` must be set to false.
+#
+# Setting the source here takes higher precedence than using the [data] table
+# below.
+#
+# source = "http://jsonplaceholder.typicode.com/db"
+
+# Data defined in this table will be used as the data served by the server if
+# the `source` value is not set.
+[data]
+
+# Path to routes file for custom routes. Pay attention to start every route
+# with `/`.
+#
+# Example:
+#
+#     [routes]
+#     "/api/" = "/"
+#     "/blog/:resource/:id/show" = "/:resource/:id"
+#     "/blog/:category" = "/posts?category=:category"
+#
+[routes]
