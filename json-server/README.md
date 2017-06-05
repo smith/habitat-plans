@@ -75,14 +75,14 @@ Then go to http://localhost:3000/users and see:
 ```json
 [
   {
-    id: 1,
-    age: 23,
-    name: "Joe"
+    "id": 1,
+    "age": 23,
+    "name": "Joe"
   },
   {
-    id: 2,
-    age: 19,
-    name: "Melinda"
+    "id": 2,
+    "age": 19,
+    "name": "Melinda"
   }
 ]
 ```
