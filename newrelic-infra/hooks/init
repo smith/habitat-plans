@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# We need SSL CA certificates, but go only looks for them in this location.
+# We'll need to symlink them if they are not there
+if [[ ! -e /etc/ssl/certs ]]; then
+  ln -svf "{{pkgPathFor "core/cacerts"}}/ssl/certs" /etc/ssl/
+fi
+
+
+if [[ ! -e "{{pkg.svc_var_path}}/db" ]]; then
+  ln -svf "{{pkg.path}}/var/db/newrelic-infra" "{{pkg.svc_var_path}}/db"
+fi
+
+if [[ ! -e /var/db/newrelic-infra ]]; then
+  if [[ ! -e /var/db ]]; then mkdir -pv /var/db; fi
+  ln -svf "{{pkg.svc_var_path}}/db" /var/db/newrelic-infra
+fi

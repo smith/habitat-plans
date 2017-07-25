@@ -1,0 +1,11 @@
+#!/bin/sh
+
+exec 2>&1
+
+{{#if cfg.debug}}
+  DEBUG="-debug"
+{{else}}
+  DEBUG=""
+{{/if}}
+
+exec newrelic-infra $DEBUG -config "{{pkg.svc_config_path}}/newrelic-infra.yml"
