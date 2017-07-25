@@ -1,7 +1,7 @@
 # Habitat Plan for New Relic Infrastructure
 
 The package created by this plan runs the [New Relic
-Infrastructue](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure)
+Infrastructure](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure)
 agent.
 
 ## Running the service
