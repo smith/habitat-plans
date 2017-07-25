@@ -9,7 +9,7 @@ agent.
 The `license_key` must be set in the configuration. This can be set with an
 environment variable on startup:
 
-    env HAB_NEW_RELIC_INFRA='license_key = "abcdef"' hab start smith/newrelic-infra --channel unstable
+    env HAB_NEWRELIC_INFRA='license_key = "abcdef"' hab start smith/newrelic-infra --channel unstable
 
 Or you can use `hab config apply` See the [Habitat configuration updates
 documentation](https://www.habitat.sh/docs/run-packages-apply-config-updates/)
